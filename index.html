@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyoti Yadav - PhD Researcher, NYU</title>
+    <meta name="description" content="Jyoti Yadav - PhD student in Biomedical Engineering at NYU, researching multimodal computational psychiatry and AI for mental health.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #2c2c2c;
+            background: #fafafa;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #57068c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #57068c;
+            color: white;
+            padding: 50px 0 40px;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            font-size: 1.05em;
+            opacity: 0.92;
+            line-height: 1.6;
+        }
+
+        header .links {
+            margin-top: 16px;
+        }
+
+        header .links a {
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 14px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-size: 0.9em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        header .links a:hover {
+            background: rgba(255,255,255,0.3);
+            text-decoration: none;
+        }
+
+        nav {
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            gap: 0;
+        }
+
+        nav a {
+            padding: 14px 18px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.9em;
+            color: #555;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover, nav a.active {
+            color: #57068c;
+            border-bottom-color: #57068c;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #57068c;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .about-text p {
+            margin-bottom: 14px;
+            font-size: 1.02em;
+        }
+
+        .research-area {
+            background: #fff;
+            border: 1px solid #e8e0f0;
+            border-left: 4px solid #57068c;
+            padding: 18px 22px;
+            margin-bottom: 16px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .research-area h3 {
+            color: #57068c;
+            margin-bottom: 8px;
+        }
+
+        .research-area p {
+            font-size: 0.95em;
+            color: #444;
+        }
+
+        .pub {
+            margin-bottom: 18px;
+            padding-left: 18px;
+            border-left: 3px solid #e0e0e0;
+        }
+
+        .pub:hover {
+            border-left-color: #57068c;
+        }
+
+        .pub .pub-title {
+            font-weight: 700;
+            color: #333;
+            font-size: 1em;
+        }
+
+        .pub .pub-authors {
+            font-size: 0.92em;
+            color: #555;
+            margin: 3px 0;
+        }
+
+        .pub .pub-authors .me {
+            font-weight: 700;
+            color: #57068c;
+        }
+
+        .pub .pub-venue {
+            font-size: 0.88em;
+            color: #777;
+            font-style: italic;
+        }
+
+        .pub .pub-badge {
+            display: inline-block;
+            background: #57068c;
+            color: white;
+            font-size: 0.75em;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-top: 4px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .timeline-item {
+            margin-bottom: 24px;
+        }
+
+        .timeline-item .role {
+            font-weight: 700;
+            font-size: 1.05em;
+        }
+
+        .timeline-item .org {
+            color: #57068c;
+            font-size: 0.95em;
+        }
+
+        .timeline-item .date {
+            font-size: 0.85em;
+            color: #888;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .timeline-item ul {
+            margin-top: 6px;
+            padding-left: 20px;
+        }
+
+        .timeline-item li {
+            font-size: 0.93em;
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .skill-category {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 14px 18px;
+            border-radius: 6px;
+        }
+
+        .skill-category h4 {
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #57068c;
+            margin-bottom: 6px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .skill-category p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .edu-item {
+            margin-bottom: 18px;
+        }
+
+        .edu-item .degree {
+            font-weight: 700;
+            font-size: 1.02em;
+        }
+
+        .edu-item .school {
+            color: #57068c;
+        }
+
+        .edu-item .details {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        .contact-info {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.95em;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85em;
+            color: #999;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.6em; }
+            .skills-grid { grid-template-columns: 1fr; }
+            nav .container { flex-wrap: wrap; }
+            nav a { padding: 10px 12px; font-size: 0.82em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Jyoti Yadav</h1>
+        <p>PhD Student, Biomedical Engineering<br>
+        New York University, Tandon School of Engineering<br>
+        Computational Psychiatry Lab, NYU Grossman School of Medicine</p>
+        <div class="links">
+            <a href="mailto:yadavj02@nyu.edu">Email</a>
+            <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=VnrY0k4AAAAJ" target="_blank">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/jyoti-yadav-234105b9/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<main class="container">
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-text">
+            <p>I am a PhD student in Biomedical Engineering at NYU Tandon School of Engineering, working in the <a href="https://med.nyu.edu/research/schultebraucks-lab/" target="_blank">Computational Psychiatry Lab</a> at NYU Grossman School of Medicine under the mentorship of Dr. Katharina Schultebraucks.</p>
+
+            <p>My research focuses on developing multimodal AI systems for scalable psychiatric assessment. I build tools that analyze clinical interview recordings, integrating vocal, facial, and linguistic signals, to detect mental health risk with interpretable, clinician-understandable reasoning. My work spans two NIH-funded studies on healthcare worker burnout (R01HL156134) and PTSD prediction in trauma survivors (R01MH129856).</p>
+
+            <p>Before starting my PhD, I completed my M.S. in Data Science and Analytics at Montclair State University (GPA: 3.7/4.0) and worked as a Data Science Intern at NYU Grossman School of Medicine, where I built computational pipelines for speech phenotyping in clinical populations.</p>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2>Research</h2>
+
+        <div class="research-area">
+            <h3>Multimodal Digital Phenotyping</h3>
+            <p>Designing and deploying audio-visual-linguistic feature extraction pipelines for video-recorded clinical interviews. Processing 650+ clinical assessments across 39 features and 5 modalities (biological, audio, video, psychological, physiological) with 97.3% data completeness on NYU's HPC cluster.</p>
+        </div>
+
+        <div class="research-area">
+            <h3>LLM-Based Psychiatric Assessment</h3>
+            <p>Co-developing multi-model LLM frameworks that perform clinically grounded reasoning over trauma narratives and clinical interviews to predict psychiatric outcomes such as PTSD and occupational burnout, with interpretable chain-of-thought rationale.</p>
+        </div>
+
+        <div class="research-area">
+            <h3>Biological Stress Phenotyping</h3>
+            <p>Using Latent Profile Analysis on cortisol, inflammatory cytokines, and psychological scales to identify distinct burnout phenotypes in healthcare workers, revealing clinically meaningful subgroups not captured by self-report alone.</p>
+        </div>
+
+        <div class="research-area">
+            <h3>Fairness and Equity in Clinical AI</h3>
+            <p>Evaluating AI-based screening tools across demographic groups to identify and mitigate disparities, informed by our lab's published framework on cultural integration and digital inclusivity in LLM deployment for mental health.</p>
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Publications and Presentations</h2>
+
+        <div class="pub">
+            <div class="pub-title">PREVIA: A Clinically-Informed Multi-Model LLM Framework for Early PTSD Risk Prediction from ED Trauma Narratives</div>
+            <div class="pub-authors">Mueller V, <span class="me">Yadav J</span>, Farnsworth A, Hilberdink CE, Gershov S, Oerman EK, Wall SP, Shalev AY, Schultebraucks K</div>
+            <div class="pub-venue">Submitted to Nature Communications (2026)</div>
+        </div>
+
+        <div class="pub">
+            <div class="pub-title">Leveraging Large Language Models for PTSD Risk Prediction: A Zero-Shot Analysis of Trauma Narratives</div>
+            <div class="pub-authors"><span class="me">Yadav J</span>, Mueller V, Farnsworth A, Agramonte J, Chang J, Lyu J, Gershov S, Hilberdink CE, Schultebraucks K</div>
+            <div class="pub-venue">Poster presented at Northeast Bioengineering Conference (NEBEC) (2025)</div>
+            <span class="pub-badge">1st Author</span>
+        </div>
+
+        <div class="pub">
+            <div class="pub-title">Burnout Phenotyping in Healthcare Workers: Latent Profiles of Biomarkers and Mental Health</div>
+            <div class="pub-authors"><span class="me">Yadav J</span>, Hilberdink CE, Gershov S, Birnbaum SB, Panahi GS, Ferguson K, Ahmed N, Schultebraucks K</div>
+            <div class="pub-venue">Poster presented at NYU Langone Health Research Day (2025)</div>
+            <span class="pub-badge">1st Author</span>
+        </div>
+
+        <div class="pub">
+            <div class="pub-title">Advancing PTSD Diagnosis: Extracting Digital Biomarkers from Real-World Audio and Video Data</div>
+            <div class="pub-authors">Mueller V, <span class="me">Yadav J</span>, Lyu J, Farnsworth A, Agramonte J, Chang J, Hilberdink CE, Schultebraucks K</div>
+            <div class="pub-venue">Poster presented at NYU Langone Health Research Day (2024)</div>
+        </div>
+
+        <div class="pub">
+            <div class="pub-title">CODA TB: Tuberculosis Prediction from Clinical Signals Using Spectrogram Analysis and Transfer Learning</div>
+            <div class="pub-authors"><span class="me">Yadav J</span>, et al.</div>
+            <div class="pub-venue">IEEE International Conference on Information, Intelligence, Systems and Applications (IISA), 2024</div>
+            <span class="pub-badge">Best Paper Award</span>
+            <span class="pub-badge">Best Poster - NJBDA</span>
+            <br><a href="https://www.montclair.edu/school-of-computing/2024/10/22/faculty-and-student-research-group-win-best-paper-at-ieee-iisa-2024-conference/" target="_blank" style="font-size: 0.85em;">[Montclair State - Best Paper Feature]</a>
+            &nbsp;|&nbsp;
+            <a href="https://www.montclair.edu/school-of-computing/2024/05/20/ms-in-data-science-graduate-wins-best-poster-at-njbda/" target="_blank" style="font-size: 0.85em;">[Montclair State - Best Poster Feature]</a>
+        </div>
+
+        <div class="pub">
+            <div class="pub-title">Linking Alternative Fuel Vehicles Adoption with Socioeconomic Status and Air Quality Index</div>
+            <div class="pub-authors"><span class="me">Yadav J</span>, et al.</div>
+            <div class="pub-venue">AAAI 2023 Workshop on AI for Social Good</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience and Education</h2>
+
+        <div class="timeline-item">
+            <div class="role">PhD Researcher, Computational Psychiatry Lab</div>
+            <div class="org">NYU Grossman School of Medicine</div>
+            <div class="date">Aug 2024 - Present</div>
+            <ul>
+                <li>Built multimodal digital phenotyping pipeline (FaceTorch, MediaPipe, Parselmouth, Librosa, Whisper) deployed on NYU HPC</li>
+                <li>Led burnout phenotyping study using Latent Profile Analysis on biological stress markers (1st author)</li>
+                <li>Co-developed PREVIA multi-LLM framework for PTSD prediction (2nd author)</li>
+                <li>PhD Qualifying Exam passed, Summer 2025</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="role">Data Science Intern, Computational Psychiatry Lab</div>
+            <div class="org">NYU Grossman School of Medicine</div>
+            <div class="date">Jun 2023 - May 2024</div>
+            <ul>
+                <li>Built computational pipelines for speech phenotyping and psychiatric endpoint alignment</li>
+                <li>Conducted statistical modeling and ML-based prediction for mental health outcomes</li>
+            </ul>
+        </div>
+
+        <hr style="margin: 28px 0; border: none; border-top: 1px solid #eee;">
+
+        <div class="edu-item">
+            <div class="degree">PhD, Biomedical Engineering / Clinical and Translational Data Science</div>
+            <div class="school">New York University, Tandon School of Engineering</div>
+            <div class="details">Aug 2024 - Present | Advisor: Katharina Schultebraucks, PhD</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="degree">M.S., Data Science and Analytics</div>
+            <div class="school">Montclair State University</div>
+            <div class="details">Sep 2022 - May 2024 | GPA: 3.7/4.0</div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming</h4>
+                <p>Python, R, SQL, Pandas, NumPy, SciPy</p>
+            </div>
+            <div class="skill-category">
+                <h4>ML and NLP</h4>
+                <p>PyTorch, HuggingFace Transformers, scikit-learn, LLM prompting</p>
+            </div>
+            <div class="skill-category">
+                <h4>Audio/Video</h4>
+                <p>Whisper, PyAnnote, Parselmouth, Librosa, FaceTorch, MediaPipe</p>
+            </div>
+            <div class="skill-category">
+                <h4>Statistics</h4>
+                <p>Latent Profile Analysis, hypothesis testing, regression, Bayesian methods</p>
+            </div>
+            <div class="skill-category">
+                <h4>Computational Biology</h4>
+                <p>High-dimensional data analysis, phenotype modeling, MOFA2</p>
+            </div>
+            <div class="skill-category">
+                <h4>Infrastructure</h4>
+                <p>NYU HPC (Greene), GPU training, Docker, AWS, Git</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:yadavj02@nyu.edu">yadavj02@nyu.edu</a></p>
+            <p><strong>Location:</strong> New York University, Grossman School of Medicine, New York, NY</p>
+            <p><strong>Lab:</strong> <a href="https://med.nyu.edu/research/schultebraucks-lab/" target="_blank">Computational Psychiatry Lab</a></p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    Jyoti Yadav | NYU Tandon School of Engineering
+</footer>
+
+</body>
+</html>
